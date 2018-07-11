@@ -1,6 +1,7 @@
 # React project boilerplate
 
-This is boilerplate code for new ReactJS projects. Clone repository to a folder of your new project, delete `.git` folder and follow installation instructions.
+This is boilerplate code for new ReactJS projects.
+Clone this repository to your new project folder, delete `.git` folder and follow installation instructions using [Docker Image](#installation-docker) or [Local Node.js](#installation-local)
 
 ```
 git clone --depth=1 git://github.com/c0nstantx/react-boilerplate.git new-project
@@ -19,9 +20,9 @@ Project uses the following development tools:
 
 ## Installation (Docker)
 
-Use docker image
+Use Node.js docker image
 
-### Install [Docker][4]
+### Install Docker
 
 Install **Docker CE** in your host machine by following the instructions found [here][5]
 
@@ -37,7 +38,7 @@ Run container by running the following command in project's root folder:
 docker-compose up
 ```
 
-A *Nodejs* container will start in development mode starts with listeners in the `/src` folder.
+A *Node.js* container will start in development mode starts with listeners in the `/src` folder.
 Also a server at port `3000` starts running for serving the compiled content at [http://localhost:3000/][3].
 
 You can change port by changing `PORT` environment variable in `docker-compose.yml` along with exposed ports.
@@ -67,7 +68,7 @@ You can run a combined command that builds production code first and then run se
     ./npm.sh run build_server
     
     
-## Installation (Host)
+## Installation (Local)
 
 Use native installation in host machine
 
