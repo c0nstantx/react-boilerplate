@@ -16,14 +16,6 @@ class App extends Component {
               </div>
             ) }
           />
-          <Route
-            path='/test' exact
-            render={ () => (
-              <div className='container'>
-                Boilerplate !!!
-              </div>
-            ) }
-          />
           <Route component={PageNotFound} />
         </Switch>
       </Router>

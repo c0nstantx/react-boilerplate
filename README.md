@@ -18,6 +18,11 @@ Project uses the following development tools:
 - [React][12]
 - [React Router][10]
 
+## Requirements
+
+- [Node.js][1] >= 8.0
+- [Docker][2] >= 1.13.0 (For Docker installation only)
+
 ## Installation (Docker)
 
 Use Node.js docker image
@@ -32,7 +37,7 @@ Install **Docker Compose** by following the instructions found [here][6]
 
 ### Run container
 
-Run container by running the following command in project's root folder:
+Change container name in `docker-compose.yml` from `react_boilerplate` to your project's name and run it using the following command in project's root folder:
 
 ```
 docker-compose up
@@ -72,7 +77,7 @@ You can run a combined command that builds production code first and then run se
 
 Use native installation in host machine
 
-### Install [Node.js][1]
+### Install Node.js
 
 Install node.js by following the appropriate instructions based on your system found [here][2]
 
