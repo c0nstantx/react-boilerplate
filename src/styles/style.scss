@@ -1,3 +1,50 @@
+@import "colors";
+
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  background-color: $grey-darkest;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  .logo {
+    img {
+      -webkit-animation: logo-spin infinite 20s linear;
+      animation: logo-spin infinite 20s linear;
+      height: 80px;
+    }
+  }
+  .content {
+    font-size: 1.5em;
+  }
+}
+
+.home {
+  text-align: center;
+  padding-top: 10px;
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.not-found {
+  font-size: 30px;
+  font-weight: bold;
+  color: $orange;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@-webkit-keyframes logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }

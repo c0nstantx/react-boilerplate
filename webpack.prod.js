@@ -3,6 +3,7 @@ const app = require('./src/app')
 
 // Libraries
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 // Constants
 const common = require('./webpack.common.js')
@@ -14,7 +15,7 @@ const prodConfig = {
     minimizer: [
       new UglifyJSPlugin({
         sourceMap: false,
-        extractComments: false
+        extractComments: true
       })
     ]
   },
@@ -30,6 +31,14 @@ const prodConfig = {
         collapseWhitespace: app.HTML_PLUGIN.COLLAPSE_WHITESPACE,
         caseSensitive: app.HTML_PLUGIN.CASE_SENSITIVE
       }
+    }),
+    // Compression plugin generates compressed version of script
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ]
 }
